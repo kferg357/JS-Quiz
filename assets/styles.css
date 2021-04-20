@@ -4,17 +4,36 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
-header{
-    justify-content: center;
+h1{
     text-align: center;
+    padding-top: 40px;
 }
+
+.time_text, .timer_sec{
+    text-align: right;
+    padding-right: 100px;
+    padding-top: 25px;
+    font-weight: 900;
+    
+}
+    
+.info_box.activateInfo{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%)scale(2);
+}
+    
+    
+
+
 
 h2{
     text-align: center;
 }
 
-.start_btn,
-.info_area{
+.start_btn
+.info_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,14 +52,15 @@ h2{
     cursor: pointer; 
 }
 
-.info_area{
-    display: none;
+.info_box{
+    display: ;
     width: 550px;
     background: rgb(227, 227, 233);
     border-radius: 10px;
 }
 
-.info_area .info_title{
+.info_box 
+.info_title{
     height: 50px;
     width: 100%;
     border-bottom: 1px solid black;
