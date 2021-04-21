@@ -9,19 +9,28 @@
 </head>
 <body>
     <header>
-        <h1>
-            Javascript Quiz Game
+        <h1 id="high_score">
+            <p>
+            View High Score
+            </p>
         </h1>
+
     <div class="timer">
-        <div class="time_text">Time Remaining</div>
-        <div class="timer_sec">60</div>
-    </div>
+            <div class="time_text">Time Remaining</div>
+            <div class="timer_sec">60</div>
+        </div>
+        <h2>
+            Javascript Quiz Game
+        </h2>
+
+       
     </header>
+
     <div class="start_btn"><button>Start Quiz</button></div>
 
     <div class="info_box">
         <div class="info_title">
-            <h2> Rules to Javascript Quiz</h2>
+            <h3> Rules to Javascript Quiz</h3>
         </div>
 
          <div class="info_area">
@@ -33,12 +42,27 @@
          </div>   
     </div>
 
-   
+    <div class="question">Question</div>
 
-   
+    <ol hiddebn class="question_box">
+        
+            <li class="box" id="one" data-choices="ChoiceOne"></li>
+            <li class="box" id="two" data-choices="ChoiceTwo>"></li>
+            <li class="box" id="three" data-choices="ChoiceThree>"></li>
+            <li class="box" id="four" data-choices="ChoiceFour>"></li>
+    </ol>
 
-    
-    
+    <p id="finaScore" hidden>Your final score: <span id="score"></span></p>
+    <form id="submit-form">
+        <div class="input-initials">
+            <label for="initials">Enter Initials: </label>
+            <input type="text" name="initials" id="initials">
+        </div>
+        <button id="submit">submit</button>
+    </form>
+    <div id="answer" style="opacity: 0;"></div>
+        
+     
     <script src="./assets/javascript.js"></script>
 </body>
 </html>

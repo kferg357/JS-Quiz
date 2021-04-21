@@ -1,0 +1,5 @@
+// Arrays in JavaScript can be used to store _____.
+1.      Numbers and strings
+2.      Other arrays
+3.      Booleans
+4.      All the above 

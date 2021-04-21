@@ -4,9 +4,17 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+
 h1{
+    text-align: left;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+h2{
     text-align: center;
-    padding-top: 40px;
+    padding-top: 0px;
 }
 
 .time_text, .timer_sec{
@@ -28,7 +36,7 @@ h1{
 
 
 
-h2{
+h3{
     text-align: center;
 }
 
