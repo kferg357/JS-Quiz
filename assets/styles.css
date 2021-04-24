@@ -23,7 +23,7 @@ h2{
     padding-top: 25px;
     font-weight: 900;
     
-}
+} */
     
 .info_box.activateInfo{
     z-index: 5;
@@ -31,9 +31,20 @@ h2{
     pointer-events: auto;
     transform: translate(-50%, -50%)scale(2);
 }
+  
+.info_area{
+    display: block;
+    justify-content: center;
     
+}
     
-
+.start_btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 100px;
+    transform: translate(-50%, -50%)
+}
 
 
 h3{
@@ -42,10 +53,10 @@ h3{
 
 .start_btn
 .info_box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 .start_btn button{
@@ -65,6 +76,7 @@ h3{
     width: 550px;
     background: rgb(227, 227, 233);
     border-radius: 10px;
+    margin: auto;
 }
 
 .info_box 
@@ -77,5 +89,6 @@ h3{
     padding: 0 40px;
     font-size: 20px;
     font-weight: 500;
+    justify-content: center;
 
 }
