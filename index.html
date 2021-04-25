@@ -1,68 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Portfolio</title>
 </head>
+
 <body>
-    <header>
-        <h1 id="high_score">
-            <p>
-            View High Score
-            </p>
-        </h1>
+  <header>
+    <div class="high_score">View High Scores</div>
+    <div class="quiz_info">
+      <div class="timer">
+        <div class="time_text">Time Remaining</div>
+        <div class="time_mins">5:00</div>
+        <h1 class="title">Javascript Quiz</h1>
+      </div>
+      <div class="time_line"></div>
+  </header>
 
-    <div class="timer">
-            <div class="time_text">Time Remaining</div>
-            <div class="timer_sec">60</div>
-        </div>
-        <h2>
-            Javascript Quiz Game
-        </h2>
+  <div id="start_btn"><button>Start Quiz</button></div>
+  <div id="next_btn"><button>Next</button></div>
 
-       
-    </header>
+  <div id="target">
 
-    <div class="start_btn"><button>Start Quiz</button></div>
-
-    <div class="info_box">
-        <div class="info_title">
-            <h3> Rules to Javascript Quiz</h3>
-        </div>
-
-         <div class="info_area">
-            <div class="info">1. Timer will start when student clicks start button</div>
-            <div class="info">2. When you answer another question you will be prompted with another question</div>.
-            <div class="info">3. If an question is answered incorrectly, time will be subtracted from clock.</div>
-            <div class="info">4. When all questions are answered or the timer reaches zero, the game is over</div>
-            <div class="info">5. When the game is over, you can see your score and save your intials.
-         </div>   
+  </div>
+  <div id="info_box">
+    <div class="info_title">
+      <section> Rules to Javascript Quiz</section>
     </div>
 
-    <div class="question" hidden>Question</div>
+    <div class="info_list">
+      <div class="info">1. Timer will start when student clicks start button</div>
+      <div class="info">2. When you answer another question you will be prompted with another question.</div>
+      <div class="info">3. If an question is answered incorrectly, time will be subtracted from clock.</div>
+      <div class="info">4. When all questions are answered or the timer reaches zero, the game is over.</div>
+      <div class="info">5. When the game is over, you can see your score and save your intials.</div>   
+    </div>
 
-    <ol hiddebn class="question_box">
-        
-            <li class="box"  hidden id="one" data-choices="ChoiceOne"></li>
-            <li class="box" hidden id="two" data-choices="ChoiceTwo>"></li>
-            <li class="box"  hidden id="three" data-choices="ChoiceThree>"></li>
-            <li class="box"  hidden id="four" data-choices="ChoiceFour>"></li>
-    </ol>
+    <div class="buttons">
+        <button id="leave_btn">Leave Quiz</button>
+        <button id="continue_btn">Continue</button>
+    </div>
+  </div>
+  
+  <section id="test_box">
+    <div id="test_quest">
+      <section>What is the HTML tag under which one can write the JavaScript code?</section>
+    </div>
+  
+    <div class="option_list">
+      <div class="option">
+      <span>Javascript</span>
+    </div>
 
-    <p id="finaScore" hidden>Your final score: <span id="score"></span></p>
-    <form id="submit-form" hidden>
-        <div class="input-initials" hidden>
-            <label for="initials">Enter Initials: </label>
-            <input type="text" name="initials" id="initials">
-        </div>
-        <button id="submit">submit</button>
-    </form>
-    <div id="answer" style="opacity: 0;"></div>
-        
-     
-    <script src="./assets/javascript.js"></script>
+    <div class="option">
+      <span>Scripted</span>
+      <div class="icon cross"><i class="fas fa-times"></i></div>
+    </div>
+
+    <div class="option">   
+      <span>Script</span>
+      <div class="icon tick"><i class="fas fa-check"></i></div>
+    </div>
+
+    <div class="option">
+      <span>JS</span>
+      </div>
+    </div>
+
+    <footer>
+      <button class="next_btn">Next</button>
+    </footer>
+  </section>
+
+
+
+
+  <script src="./javascript.js"></script>
 </body>
 </html>
