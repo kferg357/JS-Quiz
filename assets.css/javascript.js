@@ -10,8 +10,9 @@ var timeText = document.querySelector(".timer .time_left_txt");
 var timeCount = document.querySelector(".timer .timer_min");
 var next_btn = document.querySelector("#next_btn");
 var test_quest = document.getElementById("test_quest");
-var currentQuestion = 0
-var timerInterval = document.querySelector("time_start")
+var currentQuestion = 0;
+var timerInterval = document.querySelector("time_start");
+var high_score_page = document.getElementById("high_score_page");
 
 
 continue_btn.onclick = continue_game;
@@ -48,7 +49,7 @@ function quiz() {
     var question = document.createElement("h1")
     question.textContent = questions[currentQuestion].question
     container.appendChild(question)
-    console.log("hello")
+    console.log("answered")
     for (let i = 0; i < questions[currentQuestion].options.length; i++) {
         var button = document.createElement("button")
         button.textContent = questions[currentQuestion].options[i]
@@ -57,39 +58,58 @@ function quiz() {
         button.addEventListener("click", function () {
             console.log(this.textContent);
 
-    
-
+            
             //check if this.Content is the same as the current questions answer
 
             //display the next question by calling quiz()
         });
 
 }
+
+
+
 console.log("bye")
 document.querySelector("#target").appendChild(container)
 currentQuestion++
     } else{
         //save you intialts 
-        console.log("made it to the end");
+        console.log("finished");
     }
 }
-    function displayHs(){
-        HSpage.style.display = "block"
+function correctAns (answers) {}
 
-        var saved = JSON.parse(localStorage.set("playerScores"))
-        var storage = JSON.parse(localStorage).set("playerScores").length
-        var names = JSON.parse(localStorage.set("playerIntials"))
-        var ol = document.createElement("ol")   
-        topScore.appendChild(ol)
-        saved.sort()
-        console.log('s', saved)
+if (question[currentQuestion - 1].answer === '3'){
+     Correct
+} else {
+    Incorrect
+    console.log("correct")
+}
 
-        for ( let i= 0; i<storage; i++) {}
-    }
 
    
-
     
+    
+    //function for creating a text for correct and wrong answer's
+    // function createText(answer) {
+    //     if (answer === "true") {
+    //         correctEl.innerHTML = "Correct!"
+    //     } else {
+    //         correctEl.innerHTML = "Wrong!";
+    //         timer -=10;
+    //     }
+    // }
+    
+    //  timer function starts at 300 seconds
+    // function startTimer() {
+    //     countdownEl.innerHTML = "Time:" + timer;
+    //     if (timer <= 0) {
+    //         gameOver();
+    //     } else {
+    //         timer -= 1;
+    //         runningTimer = setTimeout(startTimer, 1000);
+    //     }
+    
+    // }
 
 
 
@@ -98,40 +118,7 @@ currentQuestion++
 
 
 
-
-// timer
-function NavTimer() {
-    var timerInterval = setInterval(function () {
-        secondsStart--
-        console.log(secondsStart);
-        NavTime.textContent = secondsStart;
-        if (secondsStart === 0) {
-            clearInterval(timerInterval);
-            // Finished (questionStop);
-            // loseGame = "Your out of Time";
-        }
-    }, 1000);
-}
-
-function start() {
-    // container.getElementsByClassName.display = "block";
-    // choices.document.querySelector.style.display = "block";
-    console.log("StartQuiz");
-    isWin = false;
-    // Container.getElementById.display = 'none';
-    getQuestion();
-    NavTimer();
-    // loseGame();
-    // gameOver();
-}
-
-
-var secondsStart = 300;
-var timer = 0;
-
-var NavTime = document.querySelector(".timer .timer_min");
-
-//array for questions, options and answers
+ //array for questions, options and answers
 
 let questions = [
     {

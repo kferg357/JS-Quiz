@@ -22,6 +22,11 @@ body{
     padding-left: 100px;
 }
 
+#high_score_page{
+    background: cornflowerblue;
+    
+}
+
 .time_text,
 .time_mins{
     font-size: 28px;
