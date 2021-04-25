@@ -38,22 +38,59 @@ function start_game() {
 
 next_btn.onclick = quiz;
 function quiz() {
+    console.log(currentQuestion, questions.length)
+    if (currentQuestion < questions.length){
+
+    
     document.querySelector("#target").innerHTML = ""
     console.log(questions[currentQuestion])
     var container = document.createElement("div")
     var question = document.createElement("h1")
     question.textContent = questions[currentQuestion].question
     container.appendChild(question)
+    console.log("hello")
     for (let i = 0; i < questions[currentQuestion].options.length; i++) {
         var button = document.createElement("button")
         button.textContent = questions[currentQuestion].options[i]
         container.appendChild(button)
+
+        button.addEventListener("click", function () {
+            console.log(this.textContent);
+
+    
+
+            //check if this.Content is the same as the current questions answer
+
+            //display the next question by calling quiz()
+        });
+
+}
+console.log("bye")
+document.querySelector("#target").appendChild(container)
+currentQuestion++
+    } else{
+        //save you intialts 
+        console.log("made it to the end");
+    }
+}
+    function displayHs(){
+        HSpage.style.display = "block"
+
+        var saved = JSON.parse(localStorage.set("playerScores"))
+        var storage = JSON.parse(localStorage).set("playerScores").length
+        var names = JSON.parse(localStorage.set("playerIntials"))
+        var ol = document.createElement("ol")   
+        topScore.appendChild(ol)
+        saved.sort()
+        console.log('s', saved)
+
+        for ( let i= 0; i<storage; i++) {}
     }
 
-    document.querySelector("#target").appendChild(container)
+   
 
-    currentQuestion++
-}
+    
+
 
 
 
@@ -64,19 +101,19 @@ function quiz() {
 
 // timer
 function NavTimer() {
-    var timerInterval = setInterval(function() {
-         secondsStart--
-         console.log(secondsStart);
-         NavTime.textContent = secondsStart;
-         if (secondsStart === 0) {
-             clearInterval(timerInterval);
-             // Finished (questionStop);
-             // loseGame = "Your out of Time";
-         }
-     }, 1000);
- }
+    var timerInterval = setInterval(function () {
+        secondsStart--
+        console.log(secondsStart);
+        NavTime.textContent = secondsStart;
+        if (secondsStart === 0) {
+            clearInterval(timerInterval);
+            // Finished (questionStop);
+            // loseGame = "Your out of Time";
+        }
+    }, 1000);
+}
 
- function start() {
+function start() {
     // container.getElementsByClassName.display = "block";
     // choices.document.querySelector.style.display = "block";
     console.log("StartQuiz");
@@ -89,10 +126,10 @@ function NavTimer() {
 }
 
 
-var secondsStart = 75;
+var secondsStart = 300;
 var timer = 0;
 
-var NavTime = document.getElementById("Time");
+var NavTime = document.querySelector(".timer .timer_min");
 
 //array for questions, options and answers
 
@@ -103,6 +140,7 @@ let questions = [
             "What is the HTML tag under which one can write the JavaScript code?",
         answer: "Script",
         options: ["Javascript", "Scripted", "Script", "JS"],
+        console
     },
     {
         numb: 2,
