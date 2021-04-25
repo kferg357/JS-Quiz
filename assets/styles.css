@@ -32,7 +32,8 @@ body{
 
 #start_btn,
 #info_box,
-#test_box{
+#test_box
+{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -40,7 +41,7 @@ body{
 }
 
 #info_box
-#test_box.{
+#test_box{
     z-index: 5;
     opacity: 1;
     pointer-events: auto; 
