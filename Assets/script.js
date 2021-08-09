@@ -196,3 +196,26 @@ function storeHighScores(event) {
   
   showHighScores();
 }
+
+var i = 0;
+function showHighScores() {
+  startDiv.style.display = "none";
+  timer.style.display = "none";
+  timesUp.style.display = "none";
+  summary.style.display = "none";
+  highScoreSection.style.display = "block";
+
+  var savedHighScores = localStorage.getItem("high scores");
+  if (savedHighScores === null) {
+    return;
+  }
+ console.log(savedHighScores);
+
+ var storedHighScores = JSON.parse(savedHighScores);
+ for (; i < storedHighScores.length, i++) {
+   var eachNewHighScore = document.createElement("p");
+   eachNewHighScore.innerHTML = storeHighScores[i].initlas + ":" + storeHighScores[i].score;
+   listOfHighScores.appendChild(eachNewHighScore); 
+ }
+}
+
