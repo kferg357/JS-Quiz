@@ -191,7 +191,7 @@ function storeHighScores(event) {
   console.log(userScore);
   scoresArray.push(userScore);
 
-  car scoreArrayString = JSON.stringify(scoresArray);
+  var scoreArrayString = JSON.stringify(scoresArray);
   window.localStorage.setItem("high scores", scoreArrayString);
   
   showHighScores();
@@ -212,9 +212,9 @@ function showHighScores() {
  console.log(savedHighScores);
 
  var storedHighScores = JSON.parse(savedHighScores);
- for (; i < storedHighScores.length, i++) {
+ for (; i < storedHighScores.length; i++) {
    var eachNewHighScore = document.createElement("p");
-   eachNewHighScore.innerHTML = storeHighScores[i].initlas + ":" + storeHighScores[i].score;
+   eachNewHighScore.innerHTML = storedHighScores[i].initlas + ": " + storedHighScores[i].score;
    listOfHighScores.appendChild(eachNewHighScore); 
  }
 }

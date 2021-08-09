@@ -43,25 +43,36 @@
       </div>
     </div>
 
-    
-    </main>
+    <div class="pl-5 ml-2 pt-5 justify-content-center font-weight-bold" id="summary" style="display: none;">
+    <div class="col-2"></div>
+    <div class="col-8 text-left">
+      <h2 class="font-weight-bold pt-2 pb-3 m-2">Your final Score is <span id="finalScore"></span> !</h2>
+      <form>
+        <p class="pt-2 pb-3 m-2">Enter your Initals: <input id="initialInput" class="form-control pt-2 pb-3 mt-2" type="text">
+        <button type="submit" id="sumbitInitialBtn" class="btn btn-info mt-3">Submit</button>
+      </p>
+      </form>
+    </div>
+    <div class="col-2"></div>
+    </div>
+
+    <div  id="highScoreSection" class="pl-5 ml-4 pt-5 justify-content-center font-weight-bold" style="display: none;">
+    <h2 class="font-weight-bold pt-2 pb-3 mb-2">High Scores</h2>
+
+    <div id="listOfHighScores" class="list-group list-group-flush pt-2 pb-3 mb-2"></div>
+
+    <p>
+      <button type="submit" class="btn btn-info mt-3 mr-3" id="goBackBtn">Go Back</button>
+      <button type="submit" class="btn btn-info mt-3" id="clearHighScoreBtn">Clear High Scores</button>
+    </p>
   </div>
-</body>
-
-
-
-    
-
-    
-
+    </main>
+    <div class="col-md-2"></div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   
-  
-
-  
-
-
-
-
-  <script src="./assets.css/javascript.js"></script>
+  <script src="https://kit.fontawesome.com/1d37754851.js" crossorigin="anonymous"></script>
 </body>
 </html>
