@@ -1,183 +1,47 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+body {
+    background-color: #f2f2f2;
 }
 
-body{
-    background: cornflowerblue;
+h1, h2 {
+    color: #313740;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.title{
-    text-align: center;
-    color: rgb(161, 174, 199);
-    
+a {
+    color: #3290A6;
+    font-family: 'Archivo', sans-serif;
 }
 
-#high_score{
-    font-size: 28px;
-    font-weight: 600; 
-    padding-left: 100px;
+a:hover {
+    color: #99B8BF;
+    font-family: 'Archivo', sans-serif;
 }
 
-#high_score_page{
-    background: cornflowerblue;
-    
+.btn:focus, btn:active, btn:visited {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #343a40;
 }
 
-.time_text,
-.time_mins{
-    font-size: 28px;
-    font-weight: 600;
-    text-align: right;
-    padding-right: 100px;
+#finalScore {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
-#start_btn,
-#info_box,
-#test_box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+span {
+    font-family: 'Archivo', sans-serif;
 }
 
-#info_box
-#test_box.{
-    z-index: 5;
-    opacity: 1;
-    pointer-events: auto; 
-    transform: translate(-50%, -50%) scale(1);
+p {
+    font-family: 'Archivo', sans-serif;
 }
 
-#start_btn button{
-    display:absolute;
-    font-size: 25px;
-    font-weight: 600;
-    color: magenta;
-    padding: 20px 35px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background: oldlace;
-    cursor: pointer;
-
-}
-#info_box{
-    display: ;
-    width: 442px;
-    background:rgb(161, 174, 199);
-    border-radius: 5px;
-    
-}
-
-#info_box .info_title{
-    height: 50px;
-    width: 100%;
-    border-top: 2px solid royalblue;
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    font-size: 25px;
-    font-weight: 700;
-}
-
-#info_box .info_list{
-    padding: 20px 40px;
-}
-
-#info_box .info_list .info{
-    margin: 5px 0;
-    font-size: 15px;
-}
-
-#info_box .buttons{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border-top: 2px solid  royalblue;
-}
-
-.#info_box .buttons button{
-    margin: 0;
-    height: 50px;
-    width: 100px;
-    border: 5px solid cornflowerblue;
-    background: rgb(161, 174, 199) ;
-    border-radius: 5px;
-    color:black;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-
-}
-
-.quiz_info header{
-    text-align: right;
-}
-
-
-#test_box
-{
-   display: none;
-    width: 500px;
-    background:rgb(161, 174, 199) ;
-    border-radius: 5px; 
-    
-}
-
-#test_box  section{
-    padding: 25px 30px 20px 30px;
-    background: rgb(161, 174, 199);
-    text-align: center;
-    display: flex; 
-}
-
-#test_quest
-{
+#questionTitle {
     font-size: 20px;
-    font-weight:700;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.option_list .option {  
-    font-size:20px;
-    padding: 20px 5px;
-    display: block;
-    background:cornflowerblue;
-    border: 1px solid rgb(161, 174, 199);
-    border-radius: 5px;
-    margin-bottom:15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: all 0.4s ease;
-
-} 
-
-section .option_list .option:hover{
-    color: white;
-    background:purple;
-    border: blueviolet;
+#answerCheck {
+    font-style: italic;
+    color: #4D5159;
 }
-
-footer .next_btn  #target{
-    display: flex;
-    font-size: 20px;
-    font-weight:600;
-    padding: 0 15px;
-    background:cornflowerblue ;
-    border-radius: 5px;
-    border: 1px solid rgb(161, 174, 199);
-    cursor: pointer;
-    
-    
-}
-
-
-
-
