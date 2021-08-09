@@ -127,3 +127,12 @@ function newQuiz() {
 showQuiz();
 };
 
+function showQuiz() {
+questionTitle.textContent = questions[questionIndex].question;
+choiceA.textContent = qeustions[questionIndex].choices[0];
+choiceB.textContent = qeustions[questionIndex].choices[1];
+choiceC.textContent = qeustions[questionIndex].choices[2];
+choiceD.textContent = qeustions[questionIndex].choices[3];
+}
+
+function checkAnswers(answer)
