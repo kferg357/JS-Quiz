@@ -70,7 +70,7 @@ const questions = [
 
 var timer = document.getElementById("timer");
 var timeLeft = document.getElementById("timeLeft");
-var timeUp = document.getElementById("timeUp");
+var timesUp = document.getElementById("timesUp");
 
 var startDiv = document.getElementById("start");
 var startQuizBtn = document.getElementById("start-quiz-button");
@@ -112,7 +112,7 @@ function newQuiz() {
   startDiv.style.display = "none";
   questionDiv.style.display = "block";
   timer.style.display = "block";
-  timeUp.style.display = "none";
+  timesUp.style.display = "none";
 
   var startTimer = setInterval(function() {
     totalTime--;
@@ -135,4 +135,64 @@ choiceC.textContent = qeustions[questionIndex].choices[2];
 choiceD.textContent = qeustions[questionIndex].choices[3];
 }
 
-function checkAnswers(answer)
+function checkAnswers(answer) {
+  var lineBreak = document.getElementById("lineBreak");
+  lineBreak.style.display = "block";
+  answerCheck.style.display = "block";
+
+  if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
+    corretAns++;
+    console.log(correctAns);
+    answerCheck.textContent = "Correct!!!";
+  } else {
+    gameOver();
+  }
+}
+
+function chooseA() {checkAnswers(0); }
+function chooseB() {checkAnswers(1); }
+function chooseC() {checkAnswers(2); }
+function chooseD() {checkAnswers(3); }
+
+function gameOver() {
+  summary.style.display = "block";
+  questionDiv.style.display = "none";
+  startDiv.style.display = "none";
+  timer.style.display = "none";
+  timesUp.style.display = "none";
+
+  finalScore.textContent = corretAns;
+}
+
+function storeHighScores(event) {
+  event.preventDefault();
+  if (initalInput.value === "") {
+    alert("Please enter your initials!!");
+    return;
+  }
+  startDiv.style.display = "none";
+  timer.style.display = "none";
+  timesUp.style.display = "none";
+  summary.style.display = "none";
+  highScoreSection.style.display = "block";
+
+  var savedHighScores = localStorage.getItem("high scores");
+  var scoresArray;
+
+  if (savedHighScores === null) {
+    scoresArray = [];
+  } else {
+    scoresArray = JSON.parse(savedHighScores)
+  }
+  var userScore = {
+    initals: initalInput.value,
+    score: finalScore.textContent
+  };
+  console.log(userScore);
+  scoresArray.push(userScore);
+
+  car scoreArrayString = JSON.stringify(scoresArray);
+  window.localStorage.setItem("high scores", scoreArrayString);
+  
+  showHighScores();
+}
