@@ -91,5 +91,39 @@ var everything = document.getElementById("everything");
 var highScoreSection = document.getElementById("highScoreSection");
 var finalScore = document.getElementById("finalScore");
 
-var summary = document.getElementById("summary");
+var goBackBtn = document.getElementById("goBackBtn");
+var clearHighScoreBtn = document.getElementById("clearHighScoreBtn");
+var viewHighScore = document.getElementById("viewHighScore");
+var listOfHighScores = document.getElementById("istOfHighScores");
+
+var corretAns = 0;
+var questionNum = 0;
+var scoreResult;
+var questionIndex = 0;
+
+var totalTime = 151;
+function newQuiz() {
+  questionIndex = 0;
+  totalTime = 150;
+  timeLeft = 150;
+  timeLeft.textContent = totalTime;
+  initalInput.textContent = "";
+
+  startDiv.style.display = "none";
+  questionDiv.style.display = "block";
+  timer.style.display = "block";
+  timeUp.style.display = "none";
+
+  var startTimer = setInterval(function() {
+    totalTime--;
+    timeLeft,textContent = totalTime;
+    if(totalTime <= 0) {
+      clearInterval(startTimer);
+      if (questionIndex < questions.length - 1) {
+        gameOver();
+      } 
+    }
+  },1000);
+showQuiz();
+};
 
