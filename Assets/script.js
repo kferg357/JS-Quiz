@@ -1,17 +1,17 @@
 
-const questions = [
+var questions = [
   {
     numb: 1,
     question: 'What is the HTML tag under which one can write the JavaScript code?',
     answer: 'Script',
-    options: ['Javascript', 'Scripted', 'Script', 'JS'],
+    choices: ["a. Javascript", "b. Scripted", "c. Script", "d. JS"],
     console,
   },
   {
     numb: 2,
     question: 'The external Javascript file must contatin a <script> tag. True or false?',
     answer: 'True',
-    options: ['True', 'False'],
+    choices: ['True', 'False'],
   },
   {
     numb: 3,
@@ -107,12 +107,12 @@ function newQuiz() {
   totalTime = 150;
   timeLeft = 150;
   timeLeft.textContent = totalTime;
-  initalInput.textContent = "";
+  // initalInput.textContent = [];
 
   startDiv.style.display = "none";
   questionDiv.style.display = "block";
   timer.style.display = "block";
-  timesUp.style.display = "none";
+  // timesUp.style.display = "none";
 
   var startTimer = setInterval(function() {
     totalTime--;
@@ -222,7 +222,7 @@ function showHighScores() {
 startQuizBtn.addEventListener("click", newQuiz);
 choiceA.addEventListener("click", chooseA);
 choiceB.addEventListener("click", chooseB);
-choiceC.addEventListener("click", chooseC);
+choiceC.addEventListener("click", chooseC); 
 choiceD.addEventListener("click", chooseD);
 
 submitInitialBtn.addEventListener("click", function(event) {
