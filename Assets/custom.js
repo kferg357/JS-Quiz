@@ -12,12 +12,14 @@ var qaAnsRow = document.querySelectorAll('.qa_set .qa_ans_row input');
 skip.addEventListener('click', function () {
     console.log('step!!!')
     step();
+    duration =10
 })
 
 qaAnsRow.forEach(function (qaAnsRowSingle) {
     qaAnsRowSingle.addEventListener('click', function () {
         setTimeout(function () {
             step();
+            duration =10
         }, 500)
 
         var valid = this.getAttribute("valid");
@@ -29,6 +31,7 @@ qaAnsRow.forEach(function (qaAnsRowSingle) {
             scoreCount -= 20;
             score.innerHTML = scoreCount;
             totalScore.innerHTML = scoreCount;
+
         }
     })
 });
@@ -42,6 +45,18 @@ function step() {
     qaSet[count].className = 'qa_set active';
     if (count == 10) {
         skip.style.display = 'none';
+        clearInterval(durationTime);
+        countdown.innerHTML = 0;
     }
 }
 
+var durationTime = setInterval(function () {
+    if (duration == 10) {
+        duration = 0;
+    }
+    duration += 1;
+    countdown.innerHTML = duration;
+    if (countdown.innerHTML == "10") {
+        step()
+    }
+}, 1000);
