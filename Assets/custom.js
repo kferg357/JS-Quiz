@@ -19,7 +19,7 @@ function step() {
         qaSet[i].className= 'qa_set';
     }
 qaSet[count].className= 'qa_set acive';
-if(count == 10){
-    skip.style.display = 'none'
+if(count == 5){
+    skip.style.display = 'none';
 }
 }
