@@ -57,3 +57,42 @@ font-size: 20px;
     z-index: 1;
     cursor: pointer;
 }
+
+.qa_ans_row span {
+    display: block;
+    padding: 8px 15px;
+    background-color: rgb(153, 153, 187);
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+}
+
+.qa_ans_row:hover span {
+    background-color: #9ab5ac;
+}
+
+.qa_ans_row input:checked + span {
+    background-color: red;
+}
+.qa_ans_row input[valid]:checked + span {
+    background-color: green;
+    color: white;
+}
+
+.qa_footer {
+    padding: 10px 0 0 ;
+    text-align: right;
+}
+
+.btn1 {
+    display: inline-block;
+    padding:  8px 20px;
+    background-color: #0b58a7;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn1:hover {
+    background-color: #064484;
+}
