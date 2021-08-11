@@ -29,3 +29,31 @@ body {
     border-radius: 15px 15px 0 0 ;
     font-size: 20px;
 }
+
+.qa_set {
+    display: none;
+}
+
+.qa_set.active {
+display: block;
+}
+
+.qa_set h4 {
+margin:  0 0 15px;
+font-size: 20px;
+}
+.qa_ans_row {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.qa_ans_row input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
