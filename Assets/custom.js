@@ -6,6 +6,27 @@ var count = 0;
 var scoreCount = 0;
 var duration = 0;
 
+// const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+// console.log(highScores);
+// // finsalScore.innerText = mostRecentScore;
+
+// username.addEventListener("keyup", () => {
+//     saveScoreBtn.disabled = !username.value;
+// });
+
+// savedHighScore = e => {
+//     console.log("clicked the save button")
+//     e.preventDefault();
+
+//     const score = {
+//         score: mostRecentScore,
+//         name: username.value
+//     };
+//     highScores.push(score);
+//     console.log(highScores);
+// };
+
+
 var qaSet = document.querySelectorAll('.qa_set');
 var qaAnsRow = document.querySelectorAll('.qa_set .qa_ans_row input');
 
@@ -23,7 +44,7 @@ qaAnsRow.forEach(function (qaAnsRowSingle) {
         }, 500)
 
         var valid = this.getAttribute("valid");
-        if (vaild == "valid") {
+        if (valid == "valid") {
             scoreCount += 20;
             score.innerHTML = scoreCount;
             totalScore.innerHTML = scoreCount;
@@ -60,3 +81,14 @@ var durationTime = setInterval(function () {
         step()
     }
 }, 1000);
+
+// savedHighScore = e => {
+//     console.log("clicked the save button")
+//     e.preventDefault();
+// };
+
+// function storeHighScore(event) {
+//     event.preventDefault();
+
+//     if ()
+// }
