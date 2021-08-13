@@ -15,4 +15,11 @@ Bootstrap
 Github
 Heruko
 
+## Usage 
+
+![questions js quiz](https://user-images.githubusercontent.com/79925523/129284813-9b943acb-a170-4c08-984f-db8373734d4e.PNG)
+
+![final score js quiz](https://user-images.githubusercontent.com/79925523/129284687-9aa1aec7-ceaa-4fde-a0ad-dbf4c45723ed.PNG)
+
+
 ## Authors
