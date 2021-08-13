@@ -23,3 +23,4 @@ Heruko
 
 
 ## Authors
+Kenneth Ferguson
